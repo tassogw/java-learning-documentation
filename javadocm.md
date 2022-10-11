@@ -43,6 +43,29 @@ With a proper IDE, managing files in Java can be a great way to organize program
 
 ## Variables in Java
 
+### Primitive types and their usage
+About **declaring variables**, it's pretty simple to get started, you just need to use the following model to create a variable: \<type> \<name> = \<value>  
+Example:  
+``` java
+int count = 10;
+```  
+
+It's also very easy getting used to the referred syntax and their specific sizes and usage, just by following this table:  
+
+![Primitive types in Java](assets\images\java-primitive-type-keywords-.png?raw=true)
+
+Having these informations in hand, we'll head into each type and their characteristics, knowing how to insert them properly inside your code.  
+
+- byte
+- short
+- int
+- long
+- float
+- double
+- char
+- boolean
+
+
 ## Operators
 
 ## Data input and output
