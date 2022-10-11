@@ -89,10 +89,38 @@ Having these informations in hand, we'll head into each type and their character
     char letter = 'a';
     ```
 - boolean
-    - A variable with **true** or **false** value, meaning it occupies _1 bit_ of memory
-    - Its default value is **false**, so keep that in mind when declaring a boolean variable with no initial value
+    - A variable with **true** or **false** value, meaning it occupies _1 bit_ of memory.
+    - Its default value is **false**, so keep that in mind when declaring a boolean variable with no initial value.
 
-Later on, we'll be learning how to _get_ some of these types using [data input](#data-input-and-output) from the user.
+Later on, we'll be learning how to _get_ some of these types using [data input](#data-input-and-output) from the user.  
+
+### Variables and constants
+There are some important rules and patterns envolving variables in Java that the coder need to know to avoid errors and other mistakes.  
+
+- When **declaring** a variable in Java, some steps and tips must be followed, including:
+    1. Starting the variable's name with a letter, an underscore (_) or a dollar sign ($). **Never** start with a number.
+    1. Using **Camel Case** when naming a variable, which means using capital case letters every initial from the second one (Recommendation).
+    1. Knowing that Java is **case sensitive**, this means that two variables can be named after the same word as long as their different when comparing each letter's case.
+    1. Not declaring variables' values means using their **default value** until changed by the code. Most types use 0 (zero or equivalent) as default but _boolean_ (false).  
+    ```java
+    int var1, _var2, $var3; //<-- Valid names | All start at 0
+    double 4var = 0.5; //<-- Invalid name
+    float varfive = 3.5F, varFive = 3.5F; //<-- These are different variables
+    boolean boxIsOpen; //<-- False by default | This is Camel Case
+    ```
+
+- There are also some few rules about **constants** to be followed:
+    1. A constant value **can't be changed** after its creation.
+    1. Use the **final** keyword when declaring a constant.
+    1. It's recommended using **all capital letters** to declare a constant.
+    ```java
+    final double PI = 3.14; //<-- PI will always be 3.14 
+    ```
+
+- Both variables and constants can't assume any of Java's **keywords** as a name (i.e.: null, for, double, if, etc.).  
+
+### Type Casting and Promotion
+...
 
 ## Operators
 
