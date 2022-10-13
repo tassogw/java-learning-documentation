@@ -15,6 +15,11 @@
     - Arithmetic operators
     - Relational operators
     - Logic operators
+
+1. [Structures](#structures)
+    - Repetition structures
+    - Decision structures
+
 1. [Data input and output](#data-input-and-output)
     - _DataInputStream_
     - _BufferedReader_
@@ -120,8 +125,38 @@ There are some important rules and patterns envolving variables in Java that the
 - Both variables and constants can't assume any of Java's **keywords** as a name (i.e.: null, for, double, if, etc.).  
 
 ### Type Casting and Promotion
-...
+In relation to primitive types, there are some conditions to consider before **converting** one into another. We'll divide it into two different methods:  
+
+- Promotion
+    - When the referred types are **compatible**, this means, when you're trying to convert a type to a **bigger** one.
+    - There's no keyword necessary to do this **automatic** conversion.
+    ```java
+    byte smaller = 10;
+    short bigger = 0;
+
+    bigger = smaller; //<-- Automatic conversion (bigger = 10)
+    ```
+
+- Casting
+    - When the referred types are **not compatible**, this means, when you're trying to convert a type to a **smaller** one.
+    - You need to _cast_ a **type keyword** to convert the type correctly.
+    - There's probably going to happen a **data loss**.
+     ```java
+    int smaller = 10;
+    float bigger = 12.50F;
+
+    smaller = (int)(bigger); //<-- Manual conversion with data loss (smaller = 12)
+    ```
+
+> Even though it's not necessary _casting_ a smaller type to a bigger type, it's a **good habit**, so you can keep your code more readable and to make sure no error will occur.  
+
+There's also a **expression** promotion in Java, which is an automatic conversion that changes each operand to a certain type depending on the situatio, that is:
+- Convert each byte, short or char operand into **int** when computing the expression.
+- Convert the whole expression to **long**, **float** or **double** if that's a operand's type.
 
 ## Operators
+...
+
+## Structures
 
 ## Data input and output
