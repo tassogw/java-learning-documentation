@@ -194,7 +194,7 @@ Solving equations and creating logic systems are routine tasks in software devel
     sum2 += num2++; // First, num2 is added to sum2 (0 + 10) and then it's incremented (10 + 1)
     ```
     This happens because of **operator's precedence**, which means some operators will be solved in a certain order as shown below:
-    ![Operators precedence in Java](assets\images\java-operator-precedence.png)
+    ![Operators precedence in Java](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/java-operator-precedence.png?raw=true)
     <sup>image by javatpoint [link](https://www.javatpoint.com/java-operator-precedence) here</sup>  
 
     > According to the image, the operators at the top are the highest priority inside an equation while the ones at the bottom are the lowest. The chart also includes the other types of operators that will be learnt about next.
