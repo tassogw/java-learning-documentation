@@ -20,14 +20,13 @@
     - Repetition structures
     - Decision structures
 
+1. [Libraries](#libraries)
+    - ...
+
 1. [Data input and output](#data-input-and-output)
-    - _DataInputStream_
-    - _BufferedReader_
-    - _Scanner_
-    - _JOptionPane_
+    - Input methods
     - _System.out_
     - Special characters for output
-1. (to be added)
 
 ---
 
@@ -40,8 +39,11 @@ Java is a **object-oriented programming (OOP)** language, which means it works m
 ### Why learn Java?
 Marketwise, Java is one of the most demanded programming languages nowadays and it's for a good amount of reasons. As mentioned before, Java is compatible with various devices and can be useful for many ideas, giving the developers lots of opportunities to work with, specially with big multiplatform applications that requires great amounts of features and conectivity. Besides that, it's relativily beginner friendly (for being high level) in comparison to other languages like _C_ and _C++_ and it has a huge community of devs that can help anyone anywhere you can find online. These are just some of many reasons to learn Java, it surely is a big deal in software creation.
 
-![Most demanded programming languages of 2022](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/most-in-demand-programming-languages-of-2022-codingnomads.jpg?raw=true)
-> Java appears in 2nd place among the most demanded languages of 2022 based on _LinkedIn_ job posts in USA and Europe.
+![Most demanded programming languages of 2022](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/most-in-demand-programming-languages-of-2022-codingnomads.jpg?raw=true)  
+<sup>image by CodingNomad reference [link](https://www.techrepublic.com/article/the-best-programming-languages-to-learn-in-2022/) here</sup>  
+
+> Java appears in 2nd place among the most demanded languages of 2022 based on _LinkedIn_ job posts in USA and Europe.  
+
 
 ### File managing
 With a proper IDE, managing files in Java can be a great way to organize programs and make everything properly connected. A Java application consists in a group of **classes** (functions, in a certain way), with each class having their own implementation inside the system in question and being connected one with another, making the whole code work. You're also able to group up those linked classes _logically_ inside a **package**, making the proccess more practical considering it's easier to visualize. Once you have a code, it can run pretty much everywhere with **JVM (Java Virtual Machine)**, that generates a _Bytecode_ from the `.java` compiled file and executes it in any operational system. JVM has a version for each OS, making the compatibility as it is.
@@ -58,6 +60,7 @@ int count = 10;
 It's also very easy getting used to the referred syntax and their specific sizes and usage, just by following this table:  
 
 ![Primitive types in Java](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/java-primitive-type-keywords-.png?raw=true)
+<sup>image by Facing Issues on IT [link](https://facingissuesonit.com/2019/06/24/java-primitive-type/) here</sup>
 
 Having these informations in hand, we'll head into each type and their characteristics, knowing how to insert them properly inside your code.  
 
@@ -73,8 +76,8 @@ Having these informations in hand, we'll head into each type and their character
     - Long sized integers, useful for **factorial scaled** numbers (i.e.: 20!)
     - To declare long variables, you need to end the value with an **L**, otherwise, it'll be considered as a normal int type. Example:  
     ```java
-    int num1 = 500; //<-- declaring normal int
-    long num2 = 500L; //<-- declaring long int
+    int num1 = 500; // declaring normal int
+    long num2 = 500L; // declaring long int
     ```
 - float
     - Referred to small and medium sized values with **floating points** (6~7 significant decimal digits)
@@ -119,7 +122,7 @@ There are some important rules and patterns envolving variables in Java that the
     1. Use the **final** keyword when declaring a constant.
     1. It's recommended using **all capital letters** to declare a constant.
     ```java
-    final double PI = 3.14; //<-- PI will always be 3.14 
+    final double PI = 3.14; // PI will always be 3.14 
     ```
 
 - Both variables and constants can't assume any of Java's **keywords** as a name (i.e.: null, for, double, if, etc.).  
@@ -134,7 +137,7 @@ In relation to primitive types, there are some conditions to consider before **c
     byte smaller = 10;
     short bigger = 0;
 
-    bigger = smaller; //<-- Automatic conversion (bigger = 10)
+    bigger = smaller; // Automatic conversion (bigger = 10)
     ```
 
 - Casting
@@ -145,18 +148,60 @@ In relation to primitive types, there are some conditions to consider before **c
     int smaller = 10;
     float bigger = 12.50F;
 
-    smaller = (int)(bigger); //<-- Manual conversion with data loss (smaller = 12)
+    smaller = (int)(bigger); // Manual conversion with data loss (smaller = 12)
     ```
 
-> Even though it's not necessary _casting_ a smaller type to a bigger type, it's a **good habit**, so you can keep your code more readable and to make sure no error will occur.  
+> Even though it's not necessary _casting_ a smaller type to a bigger type, it's a **good habit**, so you can keep your code more readable and to make sure no errors will occur.  
 
 There's also a **expression** promotion in Java, which is an automatic conversion that changes each operand to a certain type depending on the situatio, that is:
 - Convert each byte, short or char operand into **int** when computing the expression.
 - Convert the whole expression to **long**, **float** or **double** if that's a operand's type.
 
 ## Operators
-...
+Solving equations and creating logic systems are routine tasks in software development and that's no different in Java. For these cases, we'll learn the main operators for each type of problem, these being:
+- Arithmetic operators:  
+    For **arithmetic equations**, there's some basic operators to be known at the list below:
+    - **+** : sum (x + y = z)
+    - **-** : subtraction (x - y = z)
+    - **/** : division (x / y = z)
+    - **\*** : multiplication (x * y = z)
+    - **%** : mod division (x % y = z)
+    - **- or +** (anticipating a number) : signal assigment (-x)
+    - **++** : simple increment (++x or x++)
+    - **--** : simple decrement (--x or x--)
+
+    We can also combine the basic arithmetic operators _(+, -, *, /)_ with the **attribution operator (=)** to change a variables value easily, for example:
+    ```java
+    int number = 10;
+    number += 2; //<-- number's value is now 12
+    number -= 10; //<-- now the value is 2
+    //and so on...
+    ```
+
+    There are also some specifications about the **decrement and increment operators**. We change a variable's value by one using them:
+    change a variables value easily, for example:
+    ```java
+    int number = 10;
+    number++; //<-- number is now 11
+    number--; //<-- number is now 10 again
+    ```
+    However, the order where you put these signs in relation to an operand can change the final result. That is, anticipating a value change its value before finishing the bigger equation, and at the other way around, the value changes only after the equation. Let's see it more clearly:
+    ```java
+    int num1 = 10, sum1 = 0;
+    sum1 += ++num1; // First, num1 is incremented (10 + 1) and then added its value to sum1 (11 + 0)
+
+    int num2= 10, sum2 = 0;
+    sum2 += num2++; // First, num2 is added to sum2 (0 + 10) and then it's incremented (10 + 1)
+    ```
+    This happens because of **operator's precedence**, which means some operators will be solved in a certain order as shown below:
+    ![Operators precedence in Java](assets\images\java-operator-precedence.png)
+    <sup>image by javatpoint [link](https://www.javatpoint.com/java-operator-precedence) here</sup>  
+
+    > According to the image, the operators at the top are the highest priority inside an equation while the ones at the bottom are the lowest. The chart also includes the other types of operators that will be learnt about next.
+
 
 ## Structures
+
+## Libraries
 
 ## Data input and output
