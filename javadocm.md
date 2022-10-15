@@ -40,7 +40,7 @@ Java is a **object-oriented programming (OOP)** language, which means it works m
 Marketwise, Java is one of the most demanded programming languages nowadays and it's for a good amount of reasons. As mentioned before, Java is compatible with various devices and can be useful for many ideas, giving the developers lots of opportunities to work with, specially with big multiplatform applications that requires great amounts of features and conectivity. Besides that, it's relativily beginner friendly (for being high level) in comparison to other languages like _C_ and _C++_ and it has a huge community of devs that can help anyone anywhere you can find online. These are just some of many reasons to learn Java, it surely is a big deal in software creation.
 
 ![Most demanded programming languages of 2022](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/most-in-demand-programming-languages-of-2022-codingnomads.jpg?raw=true)  
-<sup>image by CodingNomad reference [link](https://www.techrepublic.com/article/the-best-programming-languages-to-learn-in-2022/) here</sup>  
+<sup>image by CodingNomad reference [link here](https://www.techrepublic.com/article/the-best-programming-languages-to-learn-in-2022/)</sup>  
 
 > Java appears in 2nd place among the most demanded languages of 2022 based on _LinkedIn_ job posts in USA and Europe.  
 
@@ -60,7 +60,7 @@ int count = 10;
 It's also very easy getting used to the referred syntax and their specific sizes and usage, just by following this table:  
 
 ![Primitive types in Java](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/java-primitive-type-keywords-.png?raw=true)
-<sup>image by Facing Issues on IT [link](https://facingissuesonit.com/2019/06/24/java-primitive-type/) here</sup>
+<sup>image by Facing Issues on IT [link here](https://facingissuesonit.com/2019/06/24/java-primitive-type/)</sup>
 
 Having these informations in hand, we'll head into each type and their characteristics, knowing how to insert them properly inside your code.  
 
@@ -195,7 +195,7 @@ Solving equations and creating logic systems are routine tasks in software devel
     ```
     This happens because of **operator's precedence**, which means some operators will be solved in a certain order as shown below:
     ![Operators precedence in Java](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/java-operator-precedence.png?raw=true)
-    <sup>image by javatpoint [link](https://www.javatpoint.com/java-operator-precedence) here</sup>  
+    <sup>image by javatpoint [link here](https://www.javatpoint.com/java-operator-precedence)</sup>  
 
     > According to the image, the operators at the top are the highest priority inside an equation while the ones at the bottom are the lowest. The chart also includes the other types of operators that will be learnt about next.
 
