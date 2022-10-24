@@ -17,8 +17,8 @@
     - Logic operators
 
 1. [Structures](#structures)
-    - Repetition structures
     - Decision structures
+    - Repetition structures
 
 1. [Libraries](#libraries)
     - ...
@@ -131,13 +131,13 @@ There are some important rules and patterns envolving variables in Java that the
 In relation to primitive types, there are some conditions to consider before **converting** one into another. We'll divide it into two different methods:  
 
 - Promotion
-    - When the referred types are **compatible**, this means, when you're trying to convert a type to a **bigger** one.
+    - When the referred types are **compatible**, this means, when you're trying to convert a type to a **greater** one.
     - There's no keyword necessary to do this **automatic** conversion.
     ```java
     byte smaller = 10;
-    short bigger = 0;
+    short greater = 0;
 
-    bigger = smaller; // Automatic conversion (bigger = 10)
+    greater = smaller; // Automatic conversion (greater = 10)
     ```
 
 - Casting
@@ -146,12 +146,12 @@ In relation to primitive types, there are some conditions to consider before **c
     - There's probably going to happen a **data loss**.
      ```java
     int smaller = 10;
-    float bigger = 12.50F;
+    float greater = 12.50F;
 
-    smaller = (int)(bigger); // Manual conversion with data loss (smaller = 12)
+    smaller = (int)(greater); // Manual conversion with data loss (smaller = 12)
     ```
 
-> Even though it's not necessary _casting_ a smaller type to a bigger type, it's a **good habit**, so you can keep your code more readable and to make sure no errors will occur.  
+> Even though it's not necessary _casting_ a smaller type to a greater type, it's a **good habit**, so you can keep your code more readable and to make sure no errors will occur.  
 
 There's also a **expression** promotion in Java, which is an automatic conversion that changes each operand to a certain type depending on the situatio, that is:
 - Convert each byte, short or char operand into **int** when computing the expression.
@@ -197,10 +197,50 @@ Solving equations and creating logic systems are routine tasks in software devel
     ![Operators precedence in Java](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/java-operator-precedence.png?raw=true)
     <sup>image by javatpoint [link here](https://www.javatpoint.com/java-operator-precedence)</sup>  
 
-    > According to the image, the operators at the top are the highest priority inside an equation while the ones at the bottom are the lowest. The chart also includes the other types of operators that will be learnt about next.
+    > According to the image, the operators at the top are the highest priority inside an equation while the ones at the bottom are the lowest. The chart also includes the other types of operators that will be learnt about next.  
+
+- Relational Operators
+    When trying to **compare values or expressions**, the relational operators come in handy. These being:
+    - **==** : equality (x == y)
+    - **!=** : non-equality (x != y)
+    - **<** : less than (x < y)
+    - **>** : greater than (x > y)
+    - **<=** : less or equal to (x <= y)
+    - **>=** : greater or equal to (x >= y)
+
+    The operators listed above work with **boolean** returns, meaning it contains a _true_ or _false_ value. If the condition related to the operator being used is true, as expected, it returns a true value, otherwise, a false one. For example:  
+    ```java
+    int num1 = 1, num2 = 2;
+    boolean op;
+
+    op = (num1 > num2); //In this case, the boolean op's value would be false
+    ```  
+
+- Logic Operators
+    To solve problems involving certain **conditions**, logic operators are used to analyse different expressions.
+    - **&&** : and (x && y)
+    - **||** : or (x || y)
+    - **!** : not (!x)
+
+    In those cases, _x_ and _y_ are mostly expressions that will be compared to run a specific part inside the program. Each operator acts in a different way to return a boolean value when comparing operands:  
+    - to return _true_, the **&&** operator needs to compare **only true** values
+    ```java
+    op = (x && y); //x and y need to be true
+    ```
+    - to return _true_, the **||** operator needs to compare **at least one true value** with another one
+    ```java
+    op = (x || y); //just x or y need to be true, x and y being true also works
+    ```
+    - the **!** operator simply changes an expression's value
+    ```java
+    op = !(5 > 4); //"5 > 4" would return true, but the NOT operator changes it to false
+    ```
+
+ Even though all the examples envolving boolean values would run correctly, that's not a very common way to use the operators. That is, it's uncommon to assign a value of an expression directly to a variable, instead we use them to execute only **certain parts of our code**. But how?  
 
 
 ## Structures
+...
 
 ## Libraries
 
