@@ -250,7 +250,7 @@ Structures are necessary for our code to be functional in a way the coder has **
     ```
     In the example, two different expressions were used as a condition to run our code inside the **if** statement, let's check how each structure works:
 
-    1. If
+    - if:  
     A part of code inside an _if statement_ will only run if the stabilished condition is true.
     ```java
     int sum, num1 = 3, num2 = 10;
@@ -265,7 +265,14 @@ Structures are necessary for our code to be functional in a way the coder has **
     }
     ```  
 
-    1. if-else
+    _If_ statements also work without any curly brackets if used with **single-line instructions**:
+    ```java
+    if (a > b)
+        c++; 
+    ```
+    > Keep in mind that using curly brackets everytime is a better practice even in cases like the one above.
+
+    - if-else:  
     When using if statements, the dev may want to run different paths depending on multiple conditions, in this case, a bigger structure with **ifs** and **elses** would be created.
     ```java
     int age = 16, range = 0;
@@ -281,9 +288,60 @@ Structures are necessary for our code to be functional in a way the coder has **
 
     In relation to the example above, the intention is to assign different range values according to the age specified, so, different conditions were created. To a person aged below 12, range equals 1, **else**, if aged below 18, range equals 2, and so on.  
 
-    1. switch-case
+    Even though **identation** is not a rule in Java, it's a strong recommendation to use it when dealing with _ifs_ or _if-elses_. The code below runs normally, but is way less readable then coding the normal way:
+    ```java
+    if (x > y)
+        if (y > z)
+            //single line instruction 1;
+      else
+        //single line instruction 2;
+    ```
+
+    - ternary operator:  
+    Using one line only, we can do something similar to an _if-else_ statement with a **ternary operator** that compares true or false situation:
+    ```java
+    boolean isGreater;
+
+    isGreater = (5 > 2) ? true : false;
+    ```
+    The ternary operator runs the **first code (before the colon)** if the condition inside the parenthesis is _true_ or the **second code (after the colon)** otherwise. Check the chart to try and understand visually how it works.  
+    ![Ternary Operator in Java](assets\images\ternary-operator-in-java.png)
+    <sup>Image by Hashcodec [link here](https://hashcodec.com/java-programming/ternary-operator-in-java).</sup>  
+
+    It is also possible to **align** multiples ternary operators, although it's not recommended since it makes your code **less understandable**., just like the next example:
+    ```java
+    int a = 1, b = 2, c = 3, greater = 0;
+
+    greater = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    ```
+    > "greater" will receive whichever value is greater between a, b and c, but it's hard to understand the operation the way it's coded.  
+
+    - switch-case:  
+        In some cases, we'd like to compare different situations to **various possible values** to a **single variable**, that's when **_switch-case_** takes place:  
+
+    ```java
+    switch(chosenOption){
+        case 1:{
+            message = "You chose option 1!";
+            break;
+        }
+        case 2:{
+            message = "You chose option 2!";
+            break;
+        }
+        default:{
+            message = "Unknown option, please type again.";
+            break;
+        }
+    }
+    ```  
+    Clearing things up, the code above compares differents values for the `chosenOption` variable, this means, every `case` has a possible value for it which runs its specific code (for example, if chosenOption equals 2, the code inside `case 2` will run). The `default` is useful for when none of the cases are found for that variable (for example, if chosenOption equals 3, the default case will run). Finally, for the `break;` functions, if the dev wants to run **only** the specific code, it needs to end with "break;" so the sequence is interrupted, otherwise, it will run every other case after.  
+
+- Repetition Structures  
     ...
+    
 
 ## Libraries
+
 
 ## Data input and output
