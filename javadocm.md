@@ -240,7 +240,49 @@ Solving equations and creating logic systems are routine tasks in software devel
 
 
 ## Structures
-...
+Structures are necessary for our code to be functional in a way the coder has **control** over the software by taking decisions on when and what to run. By inserting certain conditions inside structures, the developer creates different paths inside the program, these paths may have be inside two types of structures:  
+- Decision structures
+    When dealing with **different possibilities**, decision structures are used to divide the code into various paths, mostly by using conditions based on **relational** and **logic**. For example:
+    ```java
+    if ((num1 > num2)&&((num1 % 2) == 0)){
+        //This code only runs if both conditions are true
+    }
+    ```
+    In the example, two different expressions were used as a condition to run our code inside the **if** statement, let's check how each structure works:
+
+    1. If
+    A part of code inside an _if statement_ will only run if the stabilished condition is true.
+    ```java
+    int sum, num1 = 3, num2 = 10;
+
+    sum = num1 + num2;
+
+    if ((num1 < 0)||(num2 < 0)){
+        sum = 0;
+        /* In this case, we want sum only positive numbers, so if at least one is negative
+        *  the sum variable will now equal 0.
+        */
+    }
+    ```  
+
+    1. if-else
+    When using if statements, the dev may want to run different paths depending on multiple conditions, in this case, a bigger structure with **ifs** and **elses** would be created.
+    ```java
+    int age = 16, range = 0;
+
+    if (age < 12){
+        range = 1
+    } else if (age < 18) {
+        range = 2;
+    } else {
+        range = 3;
+    }
+    ```
+
+    In relation to the example above, the intention is to assign different range values according to the age specified, so, different conditions were created. To a person aged below 12, range equals 1, **else**, if aged below 18, range equals 2, and so on.  
+
+    1. switch-case
+    ...
 
 ## Libraries
 
