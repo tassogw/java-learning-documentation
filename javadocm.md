@@ -305,7 +305,7 @@ Structures are necessary for our code to be functional in a way the coder has **
     isGreater = (5 > 2) ? true : false;
     ```
     The ternary operator runs the **first code (before the colon)** if the condition inside the parenthesis is _true_ or the **second code (after the colon)** otherwise. Check the chart to try and understand visually how it works.  
-    ![Ternary Operator in Java](assets\images\ternary-operator-in-java.png)
+    ![Ternary Operator in Java](https://github.com/tassogw/java-learning-documentation/blob/main/assets/images/ternary-operator-in-java.png?raw=true)
     <sup>Image by Hashcodec [link here](https://hashcodec.com/java-programming/ternary-operator-in-java).</sup>  
 
     It is also possible to **align** multiples ternary operators, although it's not recommended since it makes your code **less understandable**., just like the next example:
