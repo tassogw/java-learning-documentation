@@ -1,6 +1,6 @@
 # Java Learning Documentation
 
-> Before start reading, it's strongly recommended that you check the "README" file for more details about the repository in general.
+> Before start reading, it's strongly recommended that you check the `README` file for more details about the repository in general.
 
 ## Summary
 1. [Java presentation](#java-presentation)
@@ -19,6 +19,7 @@
 1. [Structures](#structures)
     - Decision structures
     - Repetition structures
+    - Structure break
 
 1. [Libraries](#libraries)
     - ...
@@ -338,6 +339,48 @@ Structures are necessary for our code to be functional in a way the coder has **
     Clearing things up, the code above compares differents values for the `chosenOption` variable, this means, every `case` has a possible value for it which runs its specific code (for example, if chosenOption equals 2, the code inside `case 2` will run). The `default` is useful for when none of the cases are found for that variable (for example, if chosenOption equals 3, the default case will run). Finally, for the `break;` functions, if the dev wants to run **only** the specific code, it needs to end with "break;" so the sequence is interrupted, otherwise, it will run every other case after.  
 
 - Repetition Structures  
+    It's essencial having access to multiple parts of the code in different execution moments under certain conditions, which is why **repetition structures** are so important. For example, if the dev wants the user to insert a _certain type of input_ , like a password, a **loop** will be created and will only end when the desired condition becomes true.  
+
+    - while:
+        In a simple way, a scope inside a _while statement_ will keep running **until** a condition is false:
+
+        ```java
+        int i = 0;
+
+        while (i < 5){
+            System.out.println("i is " + i);
+            i++;
+        }
+        ```
+        The variable `i` starts with a value of 0 and, by running the scope in question, it's printed and has its value incremented. But, since its value is still less than 5, the condition remains **true** and the loop continues. When `i` reaches a 4 value, it'll be printed and incremented once more, but now, the loop ends since i is no longer less than 5.  
+
+    - do-while:
+        Very similar to a _while statement_, the only difference being its scope running **at least once** before checking the condition:
+
+        ```java
+        int i = 6;
+
+        do {
+            System.out.println("i is " + i);
+            i++;
+        } while (i < 5);
+        ```        
+        Note that `i` is greater than 5, which already makes the condition **false**. But, since it's inside a _do-while statement_, the code will run and only after that our condition will be checked. This is useful for when the user needs to input certain data before checking its value, which can't happen only using a _while statement_, since the condition would never be true in those cases.  
+
+    - for:
+        If a loop is going to run a **certain number of times**, independent of any other outer condition, a _for statement_ will certainly be useful: 
+
+        ```java
+        for(int i = 0; i < 10; i++){
+            System.out.println(i);
+        }
+        ```
+        3 essencial arguments can be noticed inside a _for statement_, time to explain each one. First, we have a **inicial condition**, usually for instancing a **iterable** variable. After that, a **stopping condition**, similar to a _while_, when something needs to be **false** to end the loop. And finally, a **instruction** that will happen everytime the scope ends, in our case, the iterable variable will be incremented. To sum everything up, this basically means that the scope will run until **i is greater or equals 10**, starting at 0 and incrementing.  
+
+- Structure break  
+    break and continue ...  
+
+- Inside a code  
     ...
     
 
