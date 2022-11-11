@@ -463,7 +463,7 @@ Structures are necessary for our code to be functional in a way the coder has **
     ```
 
 - Inside a code  
-    Considering every structure above, a practical way to clarify the learning is to see how everything looks inside a **real code**. Check an example containing most of what was learned until now to better understanding: [click here](assets\codes\Structures.java) to see a Java class inside this repo.  
+    Considering every structure above, a practical way to clarify the learning is to see how everything looks inside a **real code**. Check an example containing most of what was learned until now to better understanding: [click here](https://github.com/tassogw/java-learning-documentation/blob/main/assets/codes/Structures.java) to see a Java class inside this repo.  
     > Please note that this code goes for more simplicity than efficiency for educational purposes.  
     
 
