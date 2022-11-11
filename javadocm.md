@@ -411,7 +411,7 @@ Structures are necessary for our code to be functional in a way the coder has **
 - Structure break  
     Even though our repetition structures solve a lot of problems, it's still needed that, when coding, we have a possibility to **end** or **cut** our scope if necessary. With that in mind, `break` and `continue` are the tools for that case:  
 
-    - break
+    - break  
     If a repetition loop needs to **end** if a condition occurs, _break_ should be inserted:
 
     ```java
@@ -436,7 +436,7 @@ Structures are necessary for our code to be functional in a way the coder has **
         E{is i < 10?} -- No --> F[for ends];
     ```
 
-    - continue 
+    - continue  
     Otherwise, if we want to only **cut** a loop by ending only the current repetition, that is, _continue_ becomes more useful:
 
     ```java
