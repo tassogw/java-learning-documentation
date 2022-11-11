@@ -377,6 +377,17 @@ Structures are necessary for our code to be functional in a way the coder has **
         ```
         3 essencial arguments can be noticed inside a _for statement_, time to explain each one. First, we have a **inicial condition**, usually for instancing a **iterable** variable. After that, a **stopping condition**, similar to a _while_, when something needs to be **false** to end the loop. And finally, a **instruction** that will happen everytime the scope ends, in our case, the iterable variable will be incremented. To sum everything up, this basically means that the scope will run until **i is greater or equals 10**, starting at 0 and incrementing.  
 
+        ```mermaid
+        flowchart LR
+            A[for] --> B[i = 0];
+            B[i = 0] --> C[Scope runs];
+            C[Scope runs] --> D[i++];
+            D[i++] --> E{is i < 10?};
+            E{is i < 10?} -- Yes --> C[Scope runs];
+            E{is i < 10?} -- No --> F[*];
+        ```  
+
+
 - Structure break  
     break and continue ...  
 
