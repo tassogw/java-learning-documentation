@@ -354,6 +354,17 @@ Structures are necessary for our code to be functional in a way the coder has **
         ```
         The variable `i` starts with a value of 0 and, by running the scope in question, it's printed and has its value incremented. But, since its value is still less than 5, the condition remains **true** and the loop continues. When `i` reaches a 4 value, it'll be printed and incremented once more, but now, the loop ends since i is no longer less than 5.  
 
+        ```mermaid
+        flowchart LR
+            A{is i < 5?} -- Yes --> B[i is printed];
+            A{is i < 5?} -- No --> E[while ends];
+
+            B[i is printed]  --> C[i++];
+            C[i++] --> D{is i < 5?};
+            D{is i < 5?} -- Yes --> B[i is printed];
+            D{is i < 5?} -- No --> E[while ends];
+        ```
+
     - do-while:
         Very similar to a _while statement_, the only difference being its scope running **at least once** before checking the condition:
 
@@ -367,6 +378,15 @@ Structures are necessary for our code to be functional in a way the coder has **
         ```        
         Note that `i` is greater than 5, which already makes the condition **false**. But, since it's inside a _do-while statement_, the code will run and only after that our condition will be checked. This is useful for when the user needs to input certain data before checking its value, which can't happen only using a _while statement_, since the condition would never be true in those cases.  
 
+         ```mermaid
+        flowchart LR
+            A[do-while] --> B[i is printed];
+            B[i is printed]  --> C[i++];
+            C[i++] --> D{is i < 5?};
+            D{is i < 5?} -- Yes --> B[i is printed];
+            D{is i < 5?} -- No --> E[do-while ends];
+        ```
+
     - for:
         If a loop is going to run a **certain number of times**, independent of any other outer condition, a _for statement_ will certainly be useful: 
 
@@ -375,7 +395,7 @@ Structures are necessary for our code to be functional in a way the coder has **
             System.out.println(i);
         }
         ```
-        3 essencial arguments can be noticed inside a _for statement_, time to explain each one. First, we have a **inicial condition**, usually for instancing a **iterable** variable. After that, a **stopping condition**, similar to a _while_, when something needs to be **false** to end the loop. And finally, a **instruction** that will happen everytime the scope ends, in our case, the iterable variable will be incremented. To sum everything up, this basically means that the scope will run until **i is greater or equals 10**, starting at 0 and incrementing.  
+        3 essencial arguments can be noticed inside a _for statement_, time to explain each one. First, we have an **inicial condition**, usually for instancing an **iterable** variable. After that, a **stopping condition**, similar to a _while_, where something needs to be **false** to end the loop. And finally, an **instruction** that will happen everytime the scope ends, in our case, the iterable variable will be incremented. To sum everything up, this basically means that the scope will run until **i is greater or equals 10**, starting at 0 and incrementing.  
 
         ```mermaid
         flowchart LR
@@ -384,7 +404,7 @@ Structures are necessary for our code to be functional in a way the coder has **
             C[Scope runs] --> D[i++];
             D[i++] --> E{is i < 10?};
             E{is i < 10?} -- Yes --> C[Scope runs];
-            E{is i < 10?} -- No --> F[*];
+            E{is i < 10?} -- No --> F[for ends];
         ```  
 
 
