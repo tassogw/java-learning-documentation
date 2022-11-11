@@ -409,7 +409,57 @@ Structures are necessary for our code to be functional in a way the coder has **
 
 
 - Structure break  
-    break and continue ...  
+    Even though our repetition structures solve a lot of problems, it's still needed that, when coding, we have a possibility to **end** or **cut** our scope if necessary. With that in mind, `break` and `continue` are the tools for that case:  
+
+    - break
+    If a repetition loop needs to **end** if a condition occurs, _break_ should be inserted:
+
+    ```java
+    for (i = 0; i < 10; i++){
+        if (i == 7){
+            break;
+        }
+
+        sum += i;
+    }
+    ```
+    Theoretically, the _for_ statement would only end when `i` reaches a 10 value. But, since we have a `break;` inside an _if_ statement, the loop ends as soon as this other conditions happens.
+
+    ```mermaid
+    flowchart LR
+        A[for] --> B{is i == 7?};
+        B{is i == 7?} -- Yes --> F[for ends];
+        B{is i == 7?} -- No --> C[sums up];
+        C[sums up] --> D[i++];
+        D[i++] --> E{is i < 10?};
+        E{is i < 10?} -- Yes --> B{is i == 7?};
+        E{is i < 10?} -- No --> F[for ends];
+    ```
+
+    - continue 
+    Otherwise, if we want to only **cut** a loop by ending only the current repetition, that is, _continue_ becomes more useful:
+
+    ```java
+    for (i = 0; i < 10; i++){
+        if ((i % 2) == 0){
+            continue;
+        }
+
+        sum += i;
+    }
+    ```
+    In that case, the code is only adding odd numbers, since every even number **skips** the current repetition.  
+
+    ```mermaid
+    flowchart LR
+        A[for] --> B{is i even?};
+        B{is i even?} -- Yes --> D[i++];
+        B{is i even?} -- No --> C[sums up];
+        C[sums up] --> D[i++];
+        D[i++] --> E{is i < 10?};
+        E{is i < 10?} -- Yes --> B{is i even?};
+        E{is i < 10?} -- No --> F[for ends];
+    ```
 
 - Inside a code  
     ...
