@@ -20,6 +20,7 @@
     - Decision structures
     - Repetition structures
     - Structure break
+    - Inside a code
 
 1. [Libraries](#libraries)
     - ...
@@ -462,7 +463,7 @@ Structures are necessary for our code to be functional in a way the coder has **
     ```
 
 - Inside a code  
-    ...
+    Considering every structure above, a practical way to clarify the learning is to see how everything looks inside a **real code**. Check an example containing most of what was learned until now to better understanding: [click here](assets\codes) to see a Java class inside this repo. ...   
     
 
 ## Libraries
