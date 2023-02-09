@@ -468,6 +468,25 @@ Structures are necessary for our code to be functional in a way the coder has **
     
 
 ## Libraries
-A very important feature to have access in any way of coding is the capacity of using external resources, most of programming languages allow this by the implementing **libraries**, that's also the case for Java.
+A very important feature to have access in any way of coding is the capacity of using external resources, most of programming languages allow this by implementing **libraries**, that's also the case for Java. Libraries can also be expected when using trivial coding aspects, so, it's essencial to learn how to **import** them into your code and somethings more. Here's an example of an import in java:  
+
+```java
+import java.util.Scanner;
+
+public class Main{
+    //Main code
+}
+```   
+As you can see, the import happens at the very start of the code, before the _Main_ class or whatever will be coded. In this case, the _Scanner_ class from the _java.util_ package was imported, so we can use its (input) resources inside our code. If desired, **multiple libraries** can be imported inside a single class, for example, lets also import the _JOptionPane_ class:   
+
+```java
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+//Any other library can be imported like this
+
+public class Main{
+    //Main code
+}
+```   
 
 ## Data input and output
