@@ -468,6 +468,6 @@ Structures are necessary for our code to be functional in a way the coder has **
     
 
 ## Libraries
-...
+A very important feature to have access in any way of coding is the capacity of using external resources, most of programming languages allow this by the implementing **libraries**, that's also the case for Java.
 
 ## Data input and output
